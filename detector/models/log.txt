@@ -1,0 +1,22 @@
+testing detector models/AcfPku-person-nopad-trainDetector.mat Elapsed time is 1531.486610 seconds.
+recall on ../../../train_merge/pos is 0.868008
+Sending a stop signal to all the workers ... stopped.
+average proposal number is 1260
+
+Starting matlabpool using the 'local' profile ... connected to 12 workers.
+testing for dongcemen_6_1280x720_30_2 type person Elapsed time is 182.251927 seconds.
+recall for camera dongcemen_6_1280x720_30_2 is 0.933062 saving boxes in bbsFiles/eval-dongcemen_6_1280x720_30_2-person.mat
+testing for dongnanmen_1_1280x720_30_2 type person Elapsed time is 273.197235 seconds.
+recall for camera dongnanmen_1_1280x720_30_2 is 0.919673 saving boxes in bbsFiles/eval-dongnanmen_1_1280x720_30_2-person.mat
+testing for hongsilounorth_13_1920x1080_30_1 type person Elapsed time is 183.634173 seconds.
+recall for camera hongsilounorth_13_1920x1080_30_1 is 0.799029 saving boxes in bbsFiles/eval-hongsilounorth_13_1920x1080_30_1-person.mat
+testing for hongsilouwest_14_1920x1080_30_1 type person Elapsed time is 181.634863 seconds.
+recall for camera hongsilouwest_14_1920x1080_30_1 is 0.696207 saving boxes in bbsFiles/eval-hongsilouwest_14_1920x1080_30_1-person.mat
+testing for weiminghubeieast_11_1920x1080_30_1 type person Elapsed time is 150.143605 seconds.
+recall for camera weiminghubeieast_11_1920x1080_30_1 is 0.563258 saving boxes in bbsFiles/eval-weiminghubeieast_11_1920x1080_30_1-person.mat
+testing for weiminghubeiwest_12_1920x1080_30_1 type person Elapsed time is 179.956948 seconds.
+recall for camera weiminghubeiwest_12_1920x1080_30_1 is 0.677071 saving boxes in bbsFiles/eval-weiminghubeiwest_12_1920x1080_30_1-person.mat
+testing for weiminghudong_7_1280x720_30_2 type person Elapsed time is 56.821481 seconds.
+recall for camera weiminghudong_7_1280x720_30_2 is 0.936325 saving boxes in bbsFiles/eval-weiminghudong_7_1280x720_30_2-person.mat
+testing for yaoganqian_5_1280x720_30_2 type person Elapsed time is 74.649309 seconds.
+recall for camera yaoganqian_5_1280x720_30_2 is 0.955836 saving boxes in bbsFiles/eval-yaoganqian_5_1280x720_30_2-person.mat

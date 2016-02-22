@@ -1,0 +1,43 @@
+%% set up opts for training detector (see acfTrain)
+opts=acfTrain(); 
+opts.modelDs=[165 60]; 
+opts.modelDsPad=[165 60];
+% opts.modelDsPad=[64 32];  %person class model size
+% opts.nPos=20000;
+opts.nNeg=15000; opts.nAccNeg=25000;
+
+opts.posGtDir=[dataDir 'posGt']; opts.nWeak=[32 128 512 2048];
+opts.pBoost.pTree.maxDepth=5; opts.pBoost.discrete=0;
+opts.pBoost.pTree.fracFtrs=1/16;
+opts.pPyramid.pChns.pGradHist.softBin=1; opts.pJitter=struct('flip',1);
+opts.pPyramid.pChns.shrink=2; 
+opts.posImgDir=[dataDir 'pos']; opts.pJitter=struct('flip',1);
+opts.negImgDir=[dataDir 'neg-' classType]; 
+pLoad={'lbls',{classType}};
+opts.pLoad = [pLoad 'hRng',[100 inf], 'wRng',[30 inf] ];
+opts.name=['models/AcfPku-' classType '-1920-nopad-train'];
+
+testing detector models/AcfPku-person-1920-nopad-trainDetector.mat Elapsed time is 1281.784130 seconds.
+recall on ../../../train_merge/pos is 0.271831
+Sending a stop signal to all the workers ... stopped.
+average proposal is  322
+
+pkuDetectPerCamera
+Starting matlabpool using the 'local' profile ... connected to 12 workers.
+testing for dongcemen_6_1280x720_30_2 type person Elapsed time is 158.600934 seconds.
+recall for camera dongcemen_6_1280x720_30_2 is 0.340056 saving boxes in bbsFiles/eval-dongcemen_6_1280x720_30_2-person.mat
+testing for dongnanmen_1_1280x720_30_2 type person Elapsed time is 243.037697 seconds.
+recall for camera dongnanmen_1_1280x720_30_2 is 0.068652 saving boxes in bbsFiles/eval-dongnanmen_1_1280x720_30_2-person.mat
+testing for hongsilounorth_13_1920x1080_30_1 type person Elapsed time is 377.429144 seconds.
+recall for camera hongsilounorth_13_1920x1080_30_1 is 0.805613 saving boxes in bbsFiles/eval-hongsilounorth_13_1920x1080_30_1-person.mat
+testing for hongsilouwest_14_1920x1080_30_1 type person Elapsed time is 269.551129 seconds.
+recall for camera hongsilouwest_14_1920x1080_30_1 is 0.750459 saving boxes in bbsFiles/eval-hongsilouwest_14_1920x1080_30_1-person.mat
+testing for weiminghubeieast_11_1920x1080_30_1 type person Elapsed time is 293.864294 seconds.
+recall for camera weiminghubeieast_11_1920x1080_30_1 is 0.639094 saving boxes in bbsFiles/eval-weiminghubeieast_11_1920x1080_30_1-person.mat
+testing for weiminghubeiwest_12_1920x1080_30_1 type person Elapsed time is 228.885384 seconds.
+recall for camera weiminghubeiwest_12_1920x1080_30_1 is 0.908163 saving boxes in bbsFiles/eval-weiminghubeiwest_12_1920x1080_30_1-person.mat
+testing for weiminghudong_7_1280x720_30_2 type person Elapsed time is 69.684941 seconds.
+recall for camera weiminghudong_7_1280x720_30_2 is 0.261775 saving boxes in bbsFiles/eval-weiminghudong_7_1280x720_30_2-person.mat
+testing for yaoganqian_5_1280x720_30_2 type person Elapsed time is 76.554885 seconds.
+recall for camera yaoganqian_5_1280x720_30_2 is 0.057533 saving boxes in bbsFiles/eval-yaoganqian_5_1280x720_30_2-person.mat
+Sending a stop signal to all the workers ... stopped.
